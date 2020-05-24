@@ -1,0 +1,278 @@
+{
+  "intents": [
+    {
+      "intent": "Baa",
+      "examples": [
+        {
+          "text": "Sheep"
+        },
+        {
+          "text": "Baa Baa"
+        },
+        {
+          "text": "\\"
+        },
+        {
+          "text": "Baa Baa Black Sheep"
+        },
+        {
+          "text": "Baa Baa Black"
+        },
+        {
+          "text": "Baa"
+        },
+        {
+          "text": "Black"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Jhony",
+      "examples": [
+        {
+          "text": "Jhony"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Humpty",
+      "examples": [
+        {
+          "text": "Humpty Dumpty"
+        },
+        {
+          "text": "Humpty"
+        },
+        {
+          "text": "Dumpty"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Twinkle",
+      "examples": [
+        {
+          "text": "Twinkle Twinkle"
+        },
+        {
+          "text": "Twinkle"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Poem",
+      "examples": [
+        {
+          "text": "I want to learn poem"
+        },
+        {
+          "text": "Poem"
+        },
+        {
+          "text": "learn Poem"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Jack",
+      "examples": [
+        {
+          "text": "Jack and Jill"
+        },
+        {
+          "text": "Jill"
+        },
+        {
+          "text": "Jack"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "hump1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Humpty Dumpty sat on a wall.\nHumpty Dumpty had a great fall.\nAll the king's horses and all the King's men\nCould not put Humpty together again.\n\nHumpty Dumpty sat on a wall.\nHumpty Dumpty had a great fall.\nAll the king's horses and all the King's men\nCould not put Humpty together again\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1590292705518",
+      "conditions": "#Humpty",
+      "dialog_node": "node_5_1590292802003"
+    },
+    {
+      "type": "standard",
+      "title": "I want to learn Poem",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Options of Poems are\nTwinkle Twinkle\nJhony Jhony\nJack and Jill\nHumpty Dumpty\nBaa Baa Black Sheep"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "#Poem",
+      "dialog_node": "node_6_1590292463778"
+    },
+    {
+      "type": "standard",
+      "title": "Jhony",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Johny Johny\nYes Papa\nEating sugar?\nNo, papa\nTelling lies?\nNo, papa\nOpen your mouth\nAh, ah, ah!\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1590292463778",
+      "conditions": "#Jhony",
+      "dialog_node": "node_8_1590292705518",
+      "previous_sibling": "node_2_1590292606512"
+    },
+    {
+      "type": "standard",
+      "title": "Hum",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Humpty Dumpty sat on a wall.\nHumpty Dumpty had a great fall.\nAll the king's horses and all the King's men\nCould not put Humpty together again.\n\nHumpty Dumpty sat on a wall.\nHumpty Dumpty had a great fall.\nAll the king's horses and all the King's men\nCould not put Humpty together again."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1590292463778",
+      "conditions": "#Humpty",
+      "dialog_node": "node_2_1590292606512"
+    },
+    {
+      "type": "standard",
+      "title": "Twinkle",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.\n\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.\n\nThen the traveler in the dark\nThanks you for your tiny spark,\nHow could he see where to go,\nIf you did not twinkle so?\n\nIn the dark blue sky you keep,\nOften through my curtains peep\nFor you never shut your eye,\nTill the sun is in the sky.\n\nAs your bright and tiny spark\nLights the traveler in the dark,\nThough I know not what you are,\nTwinkle, twinkle, little star.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1590292606512",
+      "conditions": "#Twinkle",
+      "dialog_node": "node_7_1590292889573"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello This is Poem Assistant. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "for NURSERY , KG Students",
+  "language": "en",
+  "description": ""
+}
